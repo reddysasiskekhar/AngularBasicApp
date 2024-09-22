@@ -52,5 +52,11 @@ getValueFromTheTextBox(event:KeyboardEvent){
   console.log(inputtypeelement.value);
 }
 
+empName = "rayudu";
+
+modelCheckbox = true;
+
+countryID=3;
+
 
 }

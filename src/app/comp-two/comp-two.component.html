@@ -53,4 +53,39 @@
 
 <!-- <input type="text" [value="studentName"(keypress)="getValueFromTheTextBox($event)"] -->
 
-<input type="text" [value]="studentName" (input)="studentName = $event.target.value" (keypress)="getValueFromTheTextBox($event)">
+<hr>
+
+<input type="text" 
+[(ngModel)]="empName">
+
+<h1>{{empName}}</h1>
+<hr>
+
+<input
+ type="checkbox" 
+[(ngModel)]="modelCheckbox">
+
+isChecked :{{modelCheckbox}}
+
+<hr>
+
+
+<!-- here one dropdown command is select-->
+
+<!-- <select>
+    <option>india</option>
+    <option>usa</option>
+    <option>uk</option>
+</select> -->
+
+<hr>
+
+
+
+<select [(ngModel)]="countryID">
+    <option value="1">india</option>
+    <option value="2">usa</option>
+    <option value="3">uk</option>
+</select>
+
+selcetValue : {{countryID}}  

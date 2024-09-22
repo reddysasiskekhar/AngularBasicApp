@@ -1,0 +1,76 @@
+
+<!-- ngstyle --> <!-- here ngstyle is in angulere one type of atribute-->
+
+<!-- <p style="background-color: red;">sasi</p> -->
+
+<p [ngStyle]="{'background-color': redcolor}">sasi</p>
+
+<p [ngStyle]="{'background-color': yellowcolor,'color':redcolor}">reddy</p>
+
+
+
+
+<!-- ngclass-->
+
+
+<p [ngClass]="'paragraph'">paragraph</p>
+<!-- <p [ngClass]="'paragraph'">paragraph</p> -->
+
+
+<!-- ngif-->
+ <div>
+    Article Is:
+    <article *ngIf="isAdmin">
+        This is arcile based on the file
+    </article>
+ </div>
+
+ <!-- *ngFor-->
+  <!-- <ul>
+    <li>sasi</li>
+    <li>ramu</li>
+    <li>ntru</li>
+    <li>sssr</li>
+  </ul> -->
+
+<ul>
+    <li *ngFor="let student of studentName;let i = index">{{i+1}}-{{student}}</li>
+</ul>
+
+<hr>
+
+<p [ngClass]="'paragraph'" *ngFor="let pstudent of studentName;">{{pstudent}}</p>
+
+<hr>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>  
+            <td>Name</td> 
+             </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let tname of studentName ; let  i = index">
+            <td>
+                <input type="checkbox" /> <!-- Checkbox for each row -->
+              </td>
+            <td>{{i+1}}</td>
+            <td>{{tname}}</td>
+        </tr>
+        <!-- <tr>
+            <td>2</td>
+            <td>ramu</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>ntru</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>sssr</td>
+        </tr> -->
+    </tbody>
+</table>
+
+
