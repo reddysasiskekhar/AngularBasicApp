@@ -1,0 +1,56 @@
+<!-- <p>comp-two works!</p> -->
+
+
+<!-- <h1>hi i m sasi how r you</h1> -->
+
+<!--  string inerpolation (or) string binding  -->
+<h1>{{studentName}}</h1>
+<p>{{getstudentName()}}</p>
+
+<!-- property data binding  what value we have to assion in [] inside of box that is property data binding-->
+
+<hr>
+<!-- <input type="text" value="sekhar"> // this is directly we can wrigh Html syntax -->
+
+<!-- here we have to use sum syntax tahat is compnet based-->
+ <input type="text" [value]="studentName_1"> <!-- with out [] brakets we have to assin avlue is not satisfiedthats y mus and shoul we have to us "[]"-->
+
+<input [type]="inputtype">
+
+
+
+<!-- event data binding-->
+
+<button (click)="printMessage()" >click</button>
+<input type="text" (keypress)="printMessagebyTextBox()">
+
+
+<!--------mouse over the name -->
+
+<h1 (mouseover)="mouseOverChangeName()"
+(mouseleave)="mouseLeaveChangeName()">{{studentName}}</h1>
+
+<hr>
+<!-- // here we have to pass element as parmeter($event) to the method -->
+
+<input type="text" (keypress)="getValueFromTheTextBox($event)">
+
+
+<!-- {{}} this is string binding
+[] this is property binding
+() this is event data binding -->
+
+<!-- here i need to add [],() this both add single element-->
+
+
+<hr>
+
+<!-- <input type="text" [value]="studentName" (keypress)="getValueFromTheTextBox($event)"> -->
+
+<input type="text" [value]="studentName" (keyup)="getValueFromTheTextBox($event)">
+
+<!-- here one we have to wright [()] to gether-->
+
+<!-- <input type="text" [value="studentName"(keypress)="getValueFromTheTextBox($event)"] -->
+
+<input type="text" [value]="studentName" (input)="studentName = $event.target.value" (keypress)="getValueFromTheTextBox($event)">
