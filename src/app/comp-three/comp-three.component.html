@@ -16,6 +16,19 @@
 <p [ngClass]="'paragraph'">paragraph</p>
 <!-- <p [ngClass]="'paragraph'">paragraph</p> -->
 
+<hr>
+
+<!--Local ref-->
+
+<!-- <p #Paragraph>Aangular and Typescript</p>
+
+<input type="text" #itext>
+<button (click)="btnClick(Paragraph, itext)">Print Message</button> -->
+<p #Paragraph>Aangular and Typescript</p>
+
+<input type="text" #itext>
+<button (click)="btnClick(Paragraph, itext)">Print Message</button>
+
 
 <!-- ngif-->
  <div>
@@ -25,6 +38,54 @@
     </article>
  </div>
 
+ <hr>
+<!-- ng-template-->
+
+<h1>ng-template</h1>
+<!-- emements are off mood in he web page why because we are using "ng-template" thats why-->
+<ng-template>
+<p>hello paragraph</p>
+</ng-template>
+
+<div>
+    Article Is:
+    <article *ngIf="isAdmin ; else notAdmintemplate">
+        This is article based on the file
+    </article>
+
+    <ng-template #notAdmintemplate>
+        <p>you are not admin</p>
+    </ng-template>
+ </div>
+
+<!-- ngswitchcase-->
+ <hr>
+ <h1>ngswitch and ngswitchcase</h1>
+
+ <div>Student is :</div>
+ <div [ngSwitch]="studentID">
+    <P *ngSwitchCase="1">siva</P>
+    <p *ngSwitchCase="2">rama</p>
+    <p *ngSwitchCase="3">ganesha</p>
+    <p *ngSwitchCase="4">ragava</p>
+    <p *ngSwitchCase="5">ganga</p>
+    <P *ngSwitchCase="">no student---</P>
+
+ </div>
+
+
+ <div>Your element is :</div>
+ <div [ngSwitch]="elementName">
+      <input type="text"      *ngSwitchCase="'input-text'">
+      <input type="password"  *ngSwitchCase="'input-password'">
+      <input type="radio"     *ngSwitchCase="'input-radio'">
+      <input type="checkbox"  *ngSwitchCase="'input-checkbox'">
+      <p *ngSwitchDefault="">NO element--</p>
+    </div>
+
+
+    
+<hr>
  <!-- *ngFor-->
   <!-- <ul>
     <li>sasi</li>

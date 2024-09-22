@@ -14,7 +14,28 @@ export class CompThreeComponent {
 
   isAdmin = true;
 
+
   studentName = ["sasi","ramu","sssr","ntru"]
+
+
+  btnClick(parael : HTMLParagraphElement, textbox:HTMLInputElement){
+
+    console.log(parael);
+    console.log(parael.innerText);
+
+    console.log(textbox)
+    console.log(textbox.value);
+  }
+
+
+
+  studentID = 5;
+
+elementName = "input-text";
+
+
+
+
 
 }
 
